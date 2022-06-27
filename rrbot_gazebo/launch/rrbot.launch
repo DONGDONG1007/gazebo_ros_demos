@@ -1,0 +1,7 @@
+<launch>
+    	<!-- We resume the logic in rrbot_world.launch, chang nothing -->
+        <include file="$(find rrbot_gazebo)/launch/rrbot_world_only.launch">
+        </include>
+        <!-- Spawn rrbot into Gazebo-->
+        <node pkg='gazebo_ros' type='spawn_model' name='spawn_urdf' args="-file $(find rrbot_description)/urdf/rrbot.urdf -urdf -model rrbot"/>
+</launch>
